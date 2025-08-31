@@ -1,0 +1,66 @@
+.navbar{
+    padding:  20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar-links{
+    display: flex;
+    gap:20px;
+    align-items: center;
+    justify-self: center;
+    list-style: none;
+    color: #495574;
+}
+.navbar-right{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    color: #495574;
+}
+
+.navbar-links li {
+    cursor: pointer;
+
+}
+
+.btn-sign-in{
+    font-size: 15px;
+    padding: 6px 16px;
+    background: transparent;
+    border-radius: 50px;
+    color: #49557e;
+    border: 2px solid tomato;
+      transition: all 0.3s ease;
+}
+
+.btn-sign-in:hover{
+    background-color: #fff4f2;
+ 
+}
+.navbar-cart{
+    position: relative;
+    cursor: pointer;
+}
+
+
+.dot{
+    position: absolute;
+    min-width: 5px;
+    min-height: 5px;
+    background-color: tomato;
+    border-radius: 50%;
+    top: -8px;
+    right: -4px;
+}
+.active{
+    border-bottom: 2px solid #49557e;
+    border-radius: 1px;
+}
