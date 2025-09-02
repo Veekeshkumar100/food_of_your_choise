@@ -1,0 +1,139 @@
+.footer{
+    width: 100%;
+  
+    padding: 20px 8vw;
+     background-color: #1f1d1d;
+     color: #d9d9d9;
+        display: flex;
+      flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     
+
+}
+.footer-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+     gap: 50px;
+     padding: 20px;
+     width: 80vw;
+
+}
+.footer-content-left li,.footer-content-center li,.footer-content-right li{
+    list-style: none;
+    font-size: 1.1vw;
+    margin-bottom: 6px;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.footer-content-left h2,.footer-content-center h2,.footer-content-right h2{
+    font-size: max(1vw ,20px);
+}
+.footer-content-left  ,.footer-content-center ,.footer-content-right {
+display:  flex;
+flex-direction: column;
+gap: 15px;
+}
+.footer-content-left p{
+    color: white;
+font-size: 14px;
+
+}
+.footer-content-left .footer-social-icon{
+   display: flex;
+   gap: 20px;
+}
+
+
+.footer hr{
+    height: 1px;
+     width: 100%;
+    margin-top: 20px 20px;
+     background-color: #d9d9d9;
+     border: none;
+
+}
+.bottom-footer{
+    display: flex;
+    gap: 20px;
+}
+
+@media (max-width:956px) {
+  .footer-content{
+     gap: 30px;
+     padding: 15px;   
+      flex-direction: column;  
+}
+
+.bottom-footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+}
+
+
+@media (max-width:756px) {
+  .footer-content{
+  width: 100%;
+   display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.footer-content-left{
+  
+    display: flex;
+    justify-content: start;
+}
+
+.bottom-footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-content-left li,.footer-content-center li,.footer-content-right li{
+    font-size: 1.8vw;
+   
+    
+}
+.footer-content-center h2,.footer-content-right h2{
+    font-size: 2.5vw;
+    margin-bottom: 6px;
+}
+}
+
+
+@media (max-width:456px) {
+
+.bottom-footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+.footer-content-left li,.footer-content-center li,.footer-content-right li{
+    font-size: 3vw;
+   
+    
+}
+.footer-content-center h2,.footer-content-right h2{
+    font-size: 4vw;
+    margin-bottom: 6px;
+}
+.footer-content-left p{
+    font-size: 13px;
+}
+p{
+    padding-top: 5px;
+font-size: 8px;
+}
+}
+

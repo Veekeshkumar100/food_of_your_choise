@@ -1,0 +1,40 @@
+.download-icon{
+    margin: 0 auto;
+    width:100%;
+    height: 15vw;
+     text-align: center;
+}
+.download-icon p{
+    font-size: 2vw;
+    margin-bottom: 20px;
+    font-weight: 500;
+
+}
+.download-icons-img img{
+    width:min(30vw,120px);
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 2s;
+
+}
+
+    .download-icons-img img:hover{
+        transform: scale(1.2);
+    }
+
+
+  
+    @media (max-width:750px) {
+        .download-icon{
+    margin: 30px auto;
+    width:100%;
+    height: 20vw;
+     text-align: center;
+        }
+        .download-icon p{
+    font-size: 4vw;
+    margin-bottom: 20px;
+
+
+}
+}

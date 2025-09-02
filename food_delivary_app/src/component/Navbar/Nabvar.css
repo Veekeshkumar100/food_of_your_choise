@@ -64,3 +64,79 @@
     border-bottom: 2px solid #49557e;
     border-radius: 1px;
 }
+
+
+@media (max-width:975px) {
+
+
+.logo{
+    width: 110px;
+    cursor: pointer;
+}
+
+.navbar-right{
+    gap: 20px;
+} 
+.navbar-right img{
+    width: 20px;
+    gap: 20px;
+} 
+
+.btn-sign-in{
+    font-size: 16px;
+    padding: 4px 17px;
+  
+   
+}
+    }
+@media (max-width:755px) {
+
+
+.logo{
+    width: 100px;
+    cursor: pointer;
+}
+.navbar-links{
+    display: none;
+}
+
+.navbar-right{
+    gap: 20px;
+} 
+.navbar-right img{
+    width: 20px;
+    gap: 20px;
+} 
+
+.btn-sign-in{
+    font-size: 16px;
+    padding: 4px 17px;
+  
+   
+}
+.btn-sign-in{
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 10px;
+
+}
+    }
+
+    @media (max-width:450px) {
+.navbar{
+    padding:  20px 30px;
+  
+}
+
+.logo{
+    width: 80px;
+    cursor: pointer;
+}
+
+.navbar-links{
+    display: none;
+}
+.navbar-right img{
+   width:20px;
+}
+    }

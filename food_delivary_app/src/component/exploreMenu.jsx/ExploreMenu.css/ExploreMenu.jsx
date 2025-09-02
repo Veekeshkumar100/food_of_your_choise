@@ -8,7 +8,7 @@ const ExploreMenu = ({category,setCotegary}) => {
   return (
     <div className='menu'>
         <h2>Explore Your Menu</h2>
-        <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores mollitia voluptates, ique sequi quod impedit illum libero molestias ab enim.</p>
+        <p> Lorem, ipsum dolor sit g elit. Maiores mollitia voluptates, ique sequi quod impedit illum libero molestias ab enim.</p>
           <div className='Explore-menu-list'>
             {
              menu_list.map((item,index)=>{
