@@ -6,7 +6,7 @@ const ExploreMenu = ({category,setCotegary}) => {
 
 
   return (
-    <div className='menu'>
+    <div className='menu' id="explore-menu">
         <h2>Explore Your Menu</h2>
         <p> Lorem, ipsum dolor sit g elit. Maiores mollitia voluptates, ique sequi quod impedit illum libero molestias ab enim.</p>
           <div className='Explore-menu-list'>

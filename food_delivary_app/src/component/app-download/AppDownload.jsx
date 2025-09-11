@@ -3,7 +3,7 @@ import { assets } from '../../assets/assets'
 import "./app-download.css"
 const AppDownload = () => {
   return (
-    <div className='download-icon'>
+    <div className='download-icon' id="app-download">
    
             <p>For better experience Download <br/>  Tomato app</p>
             <div className='download-icons-img'>
