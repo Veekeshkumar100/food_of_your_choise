@@ -14,9 +14,18 @@ export const StoreContextProvider = (props) => {
          }
    }
    const removeItem=(itemId)=>{
-         
           setCountItem((prev)=> ({...prev,[itemId]:prev[itemId] - 1}));
            }
+
+   const getCardTotalPrice=()=>{
+            let totalAmmount=0;
+        for(const item in countItem){
+        const ItemInfo=food_list.filter((Elem)=>Elem._id===item);
+        console.log(ItemInfo);
+             totalAmmount+=ItemInfo[0].price * countItem[item];
+        }
+        return totalAmmount;
+    }
 
 useEffect(()=>{
 console.log(countItem);
@@ -27,6 +36,7 @@ console.log(countItem);
     addtocart,
     removeItem,
     countItem,
+    getCardTotalPrice,
   };
 
   return (

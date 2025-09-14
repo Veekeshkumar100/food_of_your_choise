@@ -1,0 +1,80 @@
+.login-popup{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    background-color: #00000010;
+}
+.loginpop-container{
+    background-color: white;
+    width: 300px;
+    
+    border-radius: 10px;
+    padding: 20px;
+}
+.login-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-title img{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+.loginpo-input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+.loginpo-input input{
+    outline: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.loginpo-input button{
+    padding: 10px;
+    border: none;
+    background-color: #ff6347;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.loginpop-condition{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.loginpop-condition span{
+    color: #ff6347;
+    cursor: pointer;
+}
+.loginpop-condition p{
+    margin: 0;
+    color: #0e0101c9;
+}
+.loginpop-condition input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    padding-top: 0px ;
+     margin-bottom: 8px;
+}
+.loginpop-footer {
+    
+    margin-top: 10px;
+    font-size: 14px;
+}
+.loginpop-footer span {
+    color: #ff6347;
+    cursor: pointer;
+}
