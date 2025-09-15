@@ -1,5 +1,9 @@
+import { Route, Routes } from "react-router-dom"
 import Navbar from "./component/navbar/navbar"
 import Sidebar from "./component/sidebar/Sidebar"
+import Add from "./component/page/Add/Add"
+import List from "./component/page/List/List"
+import Order from "./component/page/Order/Order"
 
 function App() {
   return (
@@ -8,6 +12,13 @@ function App() {
      <hr />
      <div className="app-container">
    <Sidebar/>
+   <div className="app-page">
+    <Routes>
+      <Route path="/add" element={<Add/>} />
+      <Route path="/list" element={<List/>} />
+      <Route path="/order" element={<Order/>} />
+    </Routes>
+   </div>
      </div>
     </>
   )

@@ -24,6 +24,10 @@
     
 }
 
+.sidebar-items .active{
+background-color: #fff0ed;
+color: tomato;
+}
 @media (max-width: 900px) {
 .sidebar-item p{
     display: none;
