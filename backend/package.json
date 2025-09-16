@@ -14,7 +14,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-     "start": " nodemon -r dotenv/config src/app.js"
+    "start": " nodemon -r dotenv/config src/app.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",

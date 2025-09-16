@@ -10,11 +10,12 @@ const app=express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(cors());
-app.use("/image",express.static('public/temp '));
+app.use("/image",express.static('public/temp'));
 
 import foodRouter from "./routers/foodRoutes.js"
+import userRoute from "./routers/user.Routes.js";
 
-
+app.use("/api/users/", userRoute)
 app.use("/api/food/",foodRouter)
 
 

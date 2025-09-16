@@ -5,11 +5,13 @@ import {ApiError} from "../utils/apierror.js";
 import  fs  from "fs";
 
 
-
 export const createFood=asyncHandler(async(req,res,next)=>{
-    const {name,description,price}=req.body;
+    console.log(req.body);
+    const {name,description,price ,category}=req.body;
     const image=req.file.filename;
     console.log(req.file);
+
+
 
     if(!name || !description || !price || !image){
         return res.status(400).json({
@@ -17,7 +19,8 @@ export const createFood=asyncHandler(async(req,res,next)=>{
             message:"please provide all the fields"
         })
     }
-    const food = new foodModel({ name, description, price, image })
+
+    const food = new foodModel({ name, description, price, image ,category})
     await food.save();
     return res.status(201).json(new ApiResponse(201, food, "food created successfully"))
 })
@@ -35,7 +38,9 @@ export const createFood=asyncHandler(async(req,res,next)=>{
 
 
 export const removeFood=asyncHandler(async(req,res,next)=>{
-   const food =await foodModel.findByIdAndDelete(req.params.id);
+    // console.log("id",req.body);
+   const food =await foodModel.findByIdAndDelete(req.body.id);
+   
     if(!food){
         throw new ApiError(404,"food not found");
     }
