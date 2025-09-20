@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 
 const Add = () => {
   const url="http://localhost:5000";
+  
   const [image, setImage] = useState(false);
  
   const [data, setData] = useState({
@@ -41,10 +42,10 @@ const Add = () => {
     
         if(res.data.statusCode===201){
           setData({
-    name: "",
-    description: "",
-    category: "",
-    price: "",
+         name: "",
+         description: "",
+         category: "",
+         price: "",
   })
        setImage(false)
           toast.success(res.data.message);
@@ -75,7 +76,7 @@ const Add = () => {
             <img src={image?URL.createObjectURL(image):assets.upload_area} alt="" />
           </label>
           
-          <input onChange={(e) => setImage(e.target.files[0])} type="file" name="image" id="file" hidden  required/>
+          <input onChange={(e) => setImage(e.target.files[0])} type="file"  name="image" id="file" hidden  required/>
         </div>
         <div className="product-name ">
           <p>Product Name</p>
@@ -83,6 +84,7 @@ const Add = () => {
             onChange={handleInaputCange}
             type="text"
             name="name"
+            value={data.name}
             placeholder="Product Name"
             required
           />
@@ -92,6 +94,7 @@ const Add = () => {
           <textarea
             onChange={handleInaputCange}
             name="description"
+            value={data.description}
             rows="10"
             placeholder="Product Description"
             required
@@ -103,6 +106,7 @@ const Add = () => {
             <select
               onChange={handleInaputCange}
               name="category"
+              value={data.category}
               id="categary"
               required
             >
@@ -113,6 +117,7 @@ const Add = () => {
               <option value="Cake">Cake</option>
               <option value="Pasta">Pasta</option>
               <option value="Noodle">Noodle</option>
+              <option value="Rools">Rolls</option>
             </select>
           </div>
           <div className="product-price">
@@ -120,6 +125,7 @@ const Add = () => {
             <input
               onChange={handleInaputCange}
               type="number"
+              value={data.price}
               name="price"
               placeholder="Product Price"
               required

@@ -16,7 +16,7 @@ export const FoodDisplayItem = ({
   return (
     <div className="foodItem">
       <div className="display-food-item-image">
-        <img src={image} alt="image" />
+        <img src={`http://localhost:5000/image/${image}`} alt="image" />
         <div className="add-to-cart">
           {!countItem[id] ? 
             <img

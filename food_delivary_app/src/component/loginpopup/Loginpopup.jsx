@@ -1,11 +1,49 @@
 
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./Loginpopup.css"; 
 import { assets } from "../../assets/assets";
+import axios from "axios";
+import { StoreContext } from "../context/storecontext";
 
 const Loginpopup = ({setShowlogin}) => {
-    const [currState,setCurrState]=useState("login");
+   const url="http://localhost:5000/api/users";
+
+   const {setToken}=useContext(StoreContext);
+
+    const [currState,setCurrState]=useState("Sign-up");
     console.log(currState);
+   const [data,setdata]=useState({
+    name:"",
+    email:"",
+    password:""
+   })
+
+
+   const handleInputChange=(e)=>{
+    const {name,value}=e.target;
+    setdata(data=>({...data,[name]:value}))
+   }
+     useEffect(()=>{
+    console.log(data);
+     },[data]);
+
+     const handleSubmit=async(e)=>{
+       e.preventDefault();
+       if(currState==="Sign-up"){
+
+        const res= await axios.post(`${url}/register`,data);
+        console.log(res);
+        setCurrState("login");
+       }else{
+          const res= await axios.post(`${url}/login`,data);
+          console.log(res);
+          localStorage.setItem("token",res.data.data.accessToken);
+          setToken(res.data.data.accessToken);
+          
+          setShowlogin(false);
+       }
+     }
+
 
 
   return (
@@ -15,12 +53,14 @@ const Loginpopup = ({setShowlogin}) => {
             <h2>{currState}</h2>
             <img  onClick={()=>setShowlogin(false)} src={assets.cross_icon}  />
         </div>
-        <div className="loginpo-input">
-          {currState==="Sign-up"? <input type="text" placeholder="Enter Name" required/>:""}
-            <input type="email" placeholder="Enter email" required/>
-            <input type="password" placeholder="Enter password" required/>
-            <button>{currState==="Sign-up" ? "create account":"login"}</button>
-        </div>
+        
+          <form onSubmit={handleSubmit} className="loginpo-input">
+          {currState==="Sign-up"? <input  onChange={handleInputChange} type="text" name="name"  placeholder="Enter Name" required/>:""}
+            <input  onChange={handleInputChange} type="email" name="email" placeholder="Enter email" required/>
+            <input  onChange={handleInputChange} type="password" name="password" placeholder="Enter password" required/>
+            <button type="submit">{currState==="Sign-up" ? "create account":"login"}</button>
+            </form>
+       
     
      <div className="loginpop-condition">
       <input type="checkbox" required/>

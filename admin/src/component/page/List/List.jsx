@@ -17,7 +17,6 @@ const List = () => {
   };
 
   const removeData=async(id)=>{
-
    const res= await axios.post(`http://localhost:5000/api/food/delete`,{id});
      await fetchDat()
 

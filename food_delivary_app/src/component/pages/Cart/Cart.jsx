@@ -33,7 +33,7 @@ const Cart = () => {
             return( 
             <div>
             <div className='card-item-title card-item-items'>
-                <img src={Item.image} alt="image"/>
+                <img src={`http://localhost:5000/image/${Item.image}`} alt="image"/>
                 <p>{Item.name}</p>
                 <p>${Item.price}</p>
                 <p>{countItem[Item._id]}</p>
